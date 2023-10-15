@@ -9,23 +9,61 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Karla:wght@200;400&family=Lexend+Deca&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="icon" type="image/x-icon" href="../assets/logo.png" />
     <title>Master Mind</title>
   </head>
   <body>
-    <div class="container-fluid">
-      <div>
-        <h2>¿Como se juega?</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit
-          architecto quam eius alias doloremque cum consectetur a, nisi eum
-          ducimus ad autem ullam in earum, accusamus, exercitationem laudantium
-          consequuntur?
-        </p>
-        <div>
-          <div><a href="../index.html">Inicio</a></div>
-          <div><a href="data.html">Jugar</a></div>
+    <div
+      class="container-fluid d-flex justify-content-center align-items-center"
+      id="container"
+    >
+      <div class="container-fluid" id="container-about">
+        <!-- TITLE -->
+        <div class="d-flex justify-content-center align-items-center mt-4">
+          <img
+            class="img-about"
+            src="../assets/title-about.png"
+            alt="¿Como se juega?"
+          />
+        </div>
+        <!-- TEXT -->
+        <div class="text-center mt-4 text-about">
+          <p>
+            El jugador debe elegir 4 colores. El objetivo del juego es adivinar
+            el orden correcto de estos colores y para ello dispondrá de 10
+            intentos.
+            <br />
+            Cada vez que el jugador pruebe con una combinación, el juego
+            proporciona pistas mediante fichas de colores. El color azul se
+            utiliza para indicar que la posición elegida es
+            <span class="correct">correcta,</span> mientras que el rosa indica
+            que la posición es <span class="incorrect">incorrecta.</span><br />
+            El juego se da por finalizado cuando el número de intentos haya
+            terminado o se averigua el orden correcto de colores. <br />
+            ¡BUENA SUERTE!
+          </p>
+        </div>
+        <!-- BUTTONS -->
+        <div class="row-8 d-flex justify-content-around">
+          <a
+            class="btn mt-4 d-flex justify-content-center align-items-center"
+            id="btn"
+            href="../index.html"
+            >INICIO</a
+          >
+          <a
+            class="btn mt-4 d-flex justify-content-center align-items-center"
+            id="btn"
+            href="data.html"
+            >JUGAR</a
+          >
         </div>
       </div>
     </div>

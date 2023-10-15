@@ -1,4 +1,54 @@
+/* Color azul -> #00FFFF */
+/* Color rosa -> #FB44FF */
 body {
   width: 100%;
   height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+  background-color: black;
+}
+#container {
+  height: 100vh;
+  background-image: url("../assets/stars.gif");
+  background-position: center;
+}
+#btn {
+  width: 10em;
+  height: 2em;
+  font-size: x-large;
+  color: #00ffff;
+  border-radius: 5px;
+  border: 2px solid #00ffff;
+  background-color: black;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    color: #fb44ff;
+    border: 2px solid #fb44ff;
+  }
+}
+
+/* about page */
+#container-about {
+  width: 45em;
+  height: 30em;
+  font-size: large;
+  color: white;
+  background-color: black;
+}
+.img-about {
+  width: 35em;
+}
+.text-about {
+  width: 40em;
+  margin: auto;
+}
+.correct {
+  color: #00ffff;
+  text-decoration: underline;
+}
+.incorrect {
+  color: #fb44ff;
+  text-decoration: underline;
 }
