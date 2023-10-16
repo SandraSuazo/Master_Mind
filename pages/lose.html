@@ -24,50 +24,36 @@
       class="container-fluid d-flex justify-content-center align-items-center"
       id="container"
     >
-      <div class="container-fluid" id="container-data">
-        <!-- PLAYER NAME -->
-        <div class="d-flex justify-content-around align-items-center mt-4">
+      <div class="container-fluid" id="container-lose">
+        <!-- LOSER -->
+        <div>
           <img
-            class="col-6"
-            src="../assets/title-data1.png"
-            alt="Indroduce tu nombre:"
-          />
-          <input
-            class="col-4 input-name"
-            id="playerName"
-            type="text"
-            maxlength="30"
+            class="col-12 mt-4 mb-4"
+            src="../assets/title-lose.png"
+            alt="¡Has Ganado!"
           />
         </div>
-        <!-- COLORS -->
-        <div
-          class="flex-column d-flex justify-content-center align-items-center mt-4"
-        >
+        <!-- PLAY AGAIN -->
+        <div class="d-flex justify-content-center">
           <img
-            class="row col-6 mt-4 mb-4"
-            src="../assets/title-data2.png"
-            alt="Elige 4 colores"
+            class="col-8 mt-4 mb-4"
+            src="../assets/title-replay.png"
+            alt="¿Jugar de nuevo?"
           />
-          <div class="col-10 d-flex justify-content-evenly mt-4 mb-4">
-            <input class="input-color" type="color" />
-            <input class="input-color" type="color" />
-            <input class="input-color" type="color" />
-            <input class="input-color" type="color" />
-          </div>
         </div>
         <!-- BUTTONS -->
         <div class="row-8 d-flex justify-content-around mt-4">
           <a
             class="btn mt-4 d-flex justify-content-center align-items-center"
             id="btn"
-            href="../index.html"
-            >INICIO</a
+            href="data.html"
+            >SI</a
           >
           <a
             class="btn mt-4 d-flex justify-content-center align-items-center"
             id="btn"
-            href="game.html"
-            >JUGAR</a
+            href="../index.html"
+            >NO</a
           >
         </div>
       </div>
