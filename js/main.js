@@ -2,14 +2,14 @@ const initGame = () => {
   const isPlayerNameSaved = savePlayerName();
   const isPlayerColorsSaved = savePlayerColors();
   if (isPlayerNameSaved && isPlayerColorsSaved) {
-    navigator("btnPlay", "./game.html");
+    navigator("btn-game", "./game.html");
   }
 };
 
 const savePlayerName = () => {
-  const playerName = document.getElementById("playerName").value;
+  const playerName = document.getElementById("input-name").value;
   if (!playerName) {
-    alert("Por favor, introduce un nombre.");
+    alert("Por favor, introduce tu nombre.");
     return false;
   }
   saveToSessionStorage("playerName", playerName);
@@ -18,10 +18,10 @@ const savePlayerName = () => {
 
 const savePlayerColors = () => {
   const playerColors = [];
-  const playerColor1 = document.getElementById("playerColor1").value;
-  const playerColor2 = document.getElementById("playerColor2").value;
-  const playerColor3 = document.getElementById("playerColor3").value;
-  const playerColor4 = document.getElementById("playerColor4").value;
+  const playerColor1 = document.getElementById("player-color1").value;
+  const playerColor2 = document.getElementById("player-color2").value;
+  const playerColor3 = document.getElementById("player-color3").value;
+  const playerColor4 = document.getElementById("player-color4").value;
   if (
     playerColor1 === "#000000" ||
     playerColor2 === "#000000" ||

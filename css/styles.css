@@ -15,13 +15,15 @@ body {
 }
 #container-about,
 #container-data,
-#container-win,
-#container-lose {
+#container-result {
   width: 70vw;
   height: 70vh;
   background-color: black;
 }
-.btn1 {
+#btn-init,
+#btn-about,
+#btn-data,
+#btn-game {
   width: 10em;
   height: 2em;
   font-size: x-large;
@@ -52,7 +54,7 @@ body {
 }
 
 /* data page */
-.input-name {
+#input-name {
   height: 5vh;
   font-size: large;
   color: white;
@@ -67,4 +69,40 @@ body {
   &:hover {
     border: 2px solid #fb44ff;
   }
+}
+
+/* game page */
+.color {
+  width: 8vw;
+  height: 8vh;
+  margin-top: 5em;
+  margin-bottom: 2em;
+  border: 1px solid white;
+  cursor: pointer;
+}
+#btn-check,
+#btn-delete,
+#btn-help,
+#btn-exit {
+  width: 15em;
+  height: 2em;
+  margin-top: 3em;
+  font-size: x-large;
+  color: #00ffff;
+  border: 2px solid #00ffff;
+  background-color: black;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    color: #fb44ff;
+    border: 2px solid #fb44ff;
+  }
+}
+.check-color {
+  width: 8vw;
+  height: 8vh;
+  margin: 0.4em;
+  border: 1px solid white;
+  background-color: black;
+  cursor: pointer;
 }

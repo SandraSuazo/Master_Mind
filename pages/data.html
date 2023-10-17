@@ -32,12 +32,7 @@
             src="../assets/title-data1.png"
             alt="Indroduce tu nombre:"
           />
-          <input
-            class="col-4 input-name"
-            id="playerName"
-            type="text"
-            maxlength="30"
-          />
+          <input class="col-4" id="input-name" type="text" maxlength="30" />
         </div>
         <!-- COLORS -->
         <div
@@ -49,24 +44,24 @@
             alt="Elige 4 colores"
           />
           <div class="col-10 d-flex justify-content-evenly mt-4 mb-4">
-            <input class="input-color" id="playerColor1" type="color" />
-            <input class="input-color" id="playerColor2" type="color" />
-            <input class="input-color" id="playerColor3" type="color" />
-            <input class="input-color" id="playerColor4" type="color" />
+            <input class="input-color" id="player-color1" type="color" />
+            <input class="input-color" id="player-color2" type="color" />
+            <input class="input-color" id="player-color3" type="color" />
+            <input class="input-color" id="player-color4" type="color" />
           </div>
         </div>
         <!-- BUTTONS -->
         <div class="row-8 d-flex justify-content-around mt-4">
           <a
-            onclick="navigator('btnInit','../index.html')"
-            id="btnInit"
-            class="btn btn1 mt-4 d-flex justify-content-center align-items-center"
+            class="btn mt-4 d-flex justify-content-center align-items-center"
+            id="btn-init"
+            onclick="navigator('btn-init','../index.html')"
             >INICIO</a
           >
           <a
-            class="btn btn1 mt-4 d-flex justify-content-center align-items-center"
+            class="btn mt-4 d-flex justify-content-center align-items-center"
+            id="btn-game"
             onclick="initGame()"
-            id="btnPlay"
             >JUGAR</a
           >
         </div>

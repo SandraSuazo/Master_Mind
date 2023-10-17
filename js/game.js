@@ -18,7 +18,7 @@ const createBoard = () => {
     for (let z = 0; z < 4; z++) {
       const square = document.createElement("div");
       square.id = `squareColor-${i}-${z}`;
-      square.classList.add("input-color");
+      square.classList.add("check-color");
       row.appendChild(square);
     }
     gameBoard.appendChild(row);

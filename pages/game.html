@@ -9,36 +9,77 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Karla:wght@200;400&family=Lexend+Deca&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="icon" type="image/x-icon" href="../assets/logo.png" />
     <title>Master Mind</title>
   </head>
   <body>
-    <div class="container-fluid col-12">
-      <!-- LEFT COLUMN -->
-      <div class="col-6">
+    <!-- LEFT COLUMN -->
+    <div class="container-fluid">
+      <div class="row" id="container">
         <!-- COLORS -->
-        <div class="d-flex mb-2 justify-content-around">
-          <div><a href="about.html">¿Como se juega?</a></div>
-          <div><a href="data.html">Volver</a></div>
+        <div class="col-5">
+          <div class="d-flex justify-content-around align-items-center">
+            <div id="color1" class="color"></div>
+            <div id="color2" class="color"></div>
+            <div id="color3" class="color"></div>
+            <div id="color4" class="color"></div>
+          </div>
+          <!-- BUTTONS -->
+          <div class="d-flex justify-content-center align-items-center">
+            <a
+              class="btn d-flex justify-content-center align-items-center"
+              id="btn-check"
+              onclick=""
+            >
+              COMPROBAR
+            </a>
+          </div>
+          <div class="d-flex justify-content-center align-items-center">
+            <a
+              class="btn d-flex justify-content-center align-items-center"
+              id="btn-delete"
+              onclick=""
+            >
+              BORRAR
+            </a>
+          </div>
+          <div class="d-flex justify-content-center align-items-center">
+            <a
+              class="btn d-flex justify-content-center align-items-center"
+              id="btn-help"
+              onclick="navigator('btn-help', '../pages/about.html')"
+            >
+              AYUDA
+            </a>
+          </div>
+          <div class="d-flex justify-content-center align-items-center">
+            <a
+              class="btn d-flex justify-content-center align-items-center"
+              id="btn-exit"
+              onclick="navigator('btn-exit', '../pages/data.html')"
+            >
+              VOLVER
+            </a>
+          </div>
         </div>
-        <div class="my-2 d-flex">
-          <div id="color1" class="input-color" type="color"></div>
-          <div id="color2" class="input-color" type="color"></div>
-          <div id="color3" class="input-color" type="color"></div>
-          <div id="color4" class="input-color" type="color"></div>
+        <!--  BOARD -->
+        <div class="col-5 d-flex justify-content-center align-items-center">
+          <div id="game-board"></div>
         </div>
-        <!-- BUTTONS -->
-        <div class="d-flex justify-content-between">
-          <div class="btn border text-light">Borrar</div>
-          <div class="btn border text-light">Comprobar</div>
+        <!-- RESULT -->
+        <div class="col-2 d-flex justify-content-center align-items-center">
+          <div id="result-board"></div>
         </div>
-      </div>
-      <!-- RIGHT COLUMN -->
-      <div class="col-6">
-        <div id="game-board" class="d-flex flex-column"></div>
       </div>
     </div>
+    <script src="../js/helpers.js"></script>
     <script src="../js/game.js"></script>
   </body>
 </html>

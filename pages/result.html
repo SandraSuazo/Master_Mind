@@ -24,15 +24,9 @@
       class="container-fluid d-flex justify-content-center align-items-center"
       id="container"
     >
-      <div class="container-fluid" id="container-lose">
-        <!-- LOSER -->
-        <div>
-          <img
-            class="col-12 mt-4 mb-4"
-            src="../assets/title-lose.png"
-            alt="¡Has Ganado!"
-          />
-        </div>
+      <div class="container-fluid" id="container-result">
+        <!-- WINNER / LOSER -->
+        <div></div>
         <!-- PLAY AGAIN -->
         <div class="d-flex justify-content-center">
           <img
@@ -45,18 +39,19 @@
         <div class="row-8 d-flex justify-content-around mt-4">
           <a
             class="btn mt-4 d-flex justify-content-center align-items-center"
-            id="btn"
-            href="data.html"
+            id="btn-data"
+            onclick="navigator('btn-data', 'data.html')"
             >SI</a
           >
           <a
             class="btn mt-4 d-flex justify-content-center align-items-center"
-            id="btn"
-            href="../index.html"
+            id="btn-init"
+            onclick="navigator('btn-init', '../index.html')"
             >NO</a
           >
         </div>
       </div>
     </div>
+    <script src="../js/helpers.js"></script>
   </body>
 </html>
