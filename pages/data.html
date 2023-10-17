@@ -49,28 +49,30 @@
             alt="Elige 4 colores"
           />
           <div class="col-10 d-flex justify-content-evenly mt-4 mb-4">
-            <input class="input-color" type="color" />
-            <input class="input-color" type="color" />
-            <input class="input-color" type="color" />
-            <input class="input-color" type="color" />
+            <input class="input-color" id="playerColor1" type="color" />
+            <input class="input-color" id="playerColor2" type="color" />
+            <input class="input-color" id="playerColor3" type="color" />
+            <input class="input-color" id="playerColor4" type="color" />
           </div>
         </div>
         <!-- BUTTONS -->
         <div class="row-8 d-flex justify-content-around mt-4">
           <a
-            class="btn mt-4 d-flex justify-content-center align-items-center"
-            id="btn"
-            href="../index.html"
+            onclick="navigator('btnInit','../index.html')"
+            id="btnInit"
+            class="btn btn1 mt-4 d-flex justify-content-center align-items-center"
             >INICIO</a
           >
           <a
-            class="btn mt-4 d-flex justify-content-center align-items-center"
-            id="btn"
-            href="game.html"
+            class="btn btn1 mt-4 d-flex justify-content-center align-items-center"
+            onclick="initGame()"
+            id="btnPlay"
             >JUGAR</a
           >
         </div>
       </div>
     </div>
+    <script src="../js/main.js"></script>
+    <script src="../js/helpers.js"></script>
   </body>
 </html>
