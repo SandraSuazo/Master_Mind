@@ -1,11 +1,4 @@
-const initGame = () => {
-  const isPlayerNameSaved = savePlayerName();
-  const isPlayerColorsSaved = savePlayerColors();
-  if (isPlayerNameSaved && isPlayerColorsSaved) {
-    navigator("btn-game", "./game.html");
-  }
-};
-
+// GUARDADO DEL NOMBRE O ALERTA
 const savePlayerName = () => {
   const playerName = document.getElementById("input-name").value;
   if (!playerName) {
@@ -16,6 +9,7 @@ const savePlayerName = () => {
   return true;
 };
 
+// GUARDADO DE COLORES O ALERTA
 const savePlayerColors = () => {
   const playerColors = [];
   const playerColor1 = document.getElementById("player-color1").value;
@@ -35,3 +29,29 @@ const savePlayerColors = () => {
   saveToSessionStorage("playerColors", playerColors);
   return true;
 };
+
+// SALUDO JUGADOR
+const getPlayerName = () => {
+  const playerName = sessionStorage.getItem("playerName");
+  const playerText = document.getElementById("text-game");
+  const textGame = `Busca la combinación correcta de colores. ¡Muchas suerte ${playerName}!`;
+  playerText.textContent = textGame;
+};
+getPlayerName();
+
+// IMPRESIÓN DE LOS 4 COLORES ELEGIDOS
+const getPlayerColors = () => {
+  const selectedColors = sessionStorage.getItem("playerColors").split(",");
+  for (let i = 1; i <= 4; i++) {
+    const gameColor = document.getElementById(`color${i}`);
+    gameColor.style.backgroundColor = selectedColors[i - 1];
+    gameColor.addEventListener("click", () => {
+      addColor(selectedColors[i - 1]);
+    });
+  }
+};
+getPlayerColors();
+
+// BARAJEADO DE LOS COLORES
+const selectedColors2 = sessionStorage.getItem("playerColors").split(",");
+const shuffledColors = selectedColors2.sort((a, b) => 0.5 - Math.random());

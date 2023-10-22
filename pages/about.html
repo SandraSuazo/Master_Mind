@@ -20,22 +20,19 @@
     <title>Master Mind</title>
   </head>
   <body>
-    <div
-      class="container-fluid d-flex justify-content-center align-items-center"
-      id="container"
-    >
-      <div class="container-fluid" id="container-about">
-        <!-- TITLE -->
-        <div class="d-flex justify-content-center align-items-center mt-4">
+    <div class="d-flex justify-content-center">
+      <div class="black-box">
+        <!-- TITULO -->
+        <div class="d-flex justify-content-center">
           <img
             class="col-8"
             src="../assets/title-about.png"
             alt="¿Como se juega?"
           />
         </div>
-        <!-- TEXT -->
-        <div class="d-flex justify-content-center mt-4" id="text-about">
-          <p class="col-10 text-center">
+        <!-- TEXTO -->
+        <div class="text-about text-center d-flex justify-content-center">
+          <p class="col-10">
             El jugador debe elegir 4 colores. El objetivo del juego es adivinar
             el orden correcto de estos colores y para ello dispondrá de 10
             intentos.
@@ -50,16 +47,16 @@
             ¡BUENA SUERTE!
           </p>
         </div>
-        <!-- BUTTONS -->
-        <div class="row-8 d-flex justify-content-around">
+        <!-- BOTONES -->
+        <div class="d-flex justify-content-around">
           <a
-            class="btn mt-4 d-flex justify-content-center align-items-center"
+            class="btn"
             id="btn-init"
             onclick="navigator('btn-init', '../index.html')"
             >INICIO</a
           >
           <a
-            class="btn mt-4 d-flex justify-content-center align-items-center"
+            class="btn"
             id="btn-game"
             onclick="navigator('btn-game', 'data.html')"
             >JUGAR</a

@@ -1,16 +1,9 @@
-const selectedColors = JSON.parse(sessionStorage.getItem("playerColors"));
-const shuffledColors = selectedColors.sort((a, b) => 0.5 - Math.random());
-const gameBoard = document.getElementById("game-board");
-const inputColor1 = document.getElementById("color1");
-const inputColor2 = document.getElementById("color2");
-const inputColor3 = document.getElementById("color3");
-const inputColor4 = document.getElementById("color4");
-inputColor1.style.backgroundColor = selectedColors[0];
-inputColor2.style.backgroundColor = selectedColors[1];
-inputColor3.style.backgroundColor = selectedColors[2];
-inputColor4.style.backgroundColor = selectedColors[3];
-
+let selectedRow = 0;
+let selectedSquare = 0;
+let selectedCircle = 0;
+// CREACIÓN DE LA TABLA
 const createBoard = () => {
+  const gameBoard = document.getElementById("game-board");
   for (let i = 0; i < 10; i++) {
     const row = document.createElement("div");
     row.id = `row-${i}`;
@@ -21,7 +14,36 @@ const createBoard = () => {
       square.classList.add("check-color");
       row.appendChild(square);
     }
+    for (let y = 0; y < 4; y++) {
+      const circle = document.createElement("div");
+      circle.id = `circleColor-${i}-${y}`;
+      circle.classList.add("check-circle");
+      row.appendChild(circle);
+    }
     gameBoard.appendChild(row);
   }
 };
 createBoard();
+
+// RELLENAR TABLA Y CORRECCIÓN
+const addColor = (color) => {
+  const square = document.getElementById(
+    `squareColor-${selectedRow}-${selectedSquare}`
+  );
+  square.style.backgroundColor = color;
+  const circle = document.getElementById(
+    `circleColor-${selectedRow}-${selectedCircle}`
+  );
+  if (color === shuffledColors[selectedSquare]) {
+    circle.style.backgroundColor = "#00FFFF";
+  } else {
+    circle.style.backgroundColor = "#FB44FF";
+  }
+  selectedSquare += 1;
+  selectedCircle += 1;
+  if (selectedSquare === 4) {
+    selectedRow += 1;
+    selectedSquare = 0;
+    selectedCircle = 0;
+  }
+};

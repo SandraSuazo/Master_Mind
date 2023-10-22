@@ -6,26 +6,21 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Montserrat";
-  background-color: black;
-}
-#container {
-  height: 100vh;
   background-image: url("../assets/stars.gif");
   background-position: center;
 }
-#container-about,
-#container-data,
-#container-result {
+
+.black-box {
   width: 70vw;
   height: 70vh;
+  margin-top: 6em;
   background-color: black;
 }
-#btn-init,
-#btn-about,
-#btn-data,
-#btn-game {
+
+.btn {
   width: 10em;
   height: 2em;
+  margin-top: 1.5em;
   font-size: x-large;
   color: #00ffff;
   border: 2px solid #00ffff;
@@ -38,29 +33,32 @@ body {
   }
 }
 
-/* about page*/
-#text-about {
-  margin: auto;
+/* ABOUT PAGE */
+.text-about {
+  margin-top: 1em;
   font-size: large;
   color: white;
 }
+
 .correct {
   color: #00ffff;
   text-decoration: underline;
 }
+
 .incorrect {
   color: #fb44ff;
   text-decoration: underline;
 }
 
-/* data page */
-#input-name {
-  height: 5vh;
+/* DATA PAGE */
+.input-text {
+  height: 2em;
   font-size: large;
   color: white;
   border: 2px solid white;
   background-color: black;
 }
+
 .input-color {
   width: 10vw;
   height: 10vh;
@@ -72,6 +70,11 @@ body {
 }
 
 /* game page */
+.text-game {
+  font-size: x-large;
+  color: white;
+}
+
 .color {
   width: 8vw;
   height: 8vh;
@@ -80,13 +83,10 @@ body {
   border: 1px solid white;
   cursor: pointer;
 }
-#btn-check,
-#btn-delete,
-#btn-help,
-#btn-exit {
+
+.btn-game {
   width: 15em;
   height: 2em;
-  margin-top: 3em;
   font-size: x-large;
   color: #00ffff;
   border: 2px solid #00ffff;
@@ -98,6 +98,7 @@ body {
     border: 2px solid #fb44ff;
   }
 }
+
 .check-color {
   width: 8vw;
   height: 8vh;
@@ -105,4 +106,14 @@ body {
   border: 1px solid white;
   background-color: black;
   cursor: pointer;
+}
+
+.check-circle {
+  width: 20px;
+  height: 20px;
+  margin: 0.5em;
+  border: 1px solid white;
+  background-color: black;
+  cursor: pointer;
+  border-radius: 50%;
 }
