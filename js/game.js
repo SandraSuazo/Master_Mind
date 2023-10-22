@@ -1,6 +1,7 @@
 let selectedRow = 0;
 let selectedSquare = 0;
 let selectedCircle = 0;
+
 // CREACIÓN DE LA TABLA
 const createBoard = () => {
   const gameBoard = document.getElementById("game-board");

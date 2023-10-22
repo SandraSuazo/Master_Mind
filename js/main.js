@@ -11,21 +11,16 @@ const savePlayerName = () => {
 
 // GUARDADO DE COLORES O ALERTA
 const savePlayerColors = () => {
-  const playerColors = [];
-  const playerColor1 = document.getElementById("player-color1").value;
-  const playerColor2 = document.getElementById("player-color2").value;
-  const playerColor3 = document.getElementById("player-color3").value;
-  const playerColor4 = document.getElementById("player-color4").value;
-  if (
-    playerColor1 === "#000000" ||
-    playerColor2 === "#000000" ||
-    playerColor3 === "#000000" ||
-    playerColor4 === "#000000"
-  ) {
-    alert("Por favor, seleciona 4 colores.");
+  const playerColors = [
+    document.getElementById("player-color1").value,
+    document.getElementById("player-color2").value,
+    document.getElementById("player-color3").value,
+    document.getElementById("player-color4").value,
+  ];
+  if (playerColors.includes("#000000")) {
+    alert("Por favor, selecciona 4 colores.");
     return false;
   }
-  playerColors.push(playerColor1, playerColor2, playerColor3, playerColor4);
   saveToSessionStorage("playerColors", playerColors);
   return true;
 };
@@ -34,7 +29,7 @@ const savePlayerColors = () => {
 const getPlayerName = () => {
   const playerName = sessionStorage.getItem("playerName");
   const playerText = document.getElementById("text-game");
-  const textGame = `Busca la combinación correcta de colores. ¡Muchas suerte ${playerName}!`;
+  const textGame = `Busca la combinación de colores correcta. ¡Muchas suerte ${playerName}!`;
   playerText.textContent = textGame;
 };
 getPlayerName();
