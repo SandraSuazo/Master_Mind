@@ -38,7 +38,7 @@ const addColor = (color) => {
   checkColors();
 };
 
-// CORRECCIÓN DE COLORES
+// CORRECCIÓN DE COLORES Y PANTALLA GANADOR / PERDEDOR
 const checkColors = () => {
   if (selectedSquare === 4) {
     for (let i = 0; i < 4; i++) {
@@ -51,8 +51,14 @@ const checkColors = () => {
         circle.style.backgroundColor = "#fb44ff";
       }
     }
+    if (shuffledColors.toString() === rowColors.toString()) {
+      window.location.href = "./winner.html";
+    }
     selectedSquare = 0;
     selectedRow += 1;
+    if (selectedRow === 10) {
+      window.location.href = "./loser.html";
+    }
     rowColors = [];
   }
 };

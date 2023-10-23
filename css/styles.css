@@ -40,6 +40,10 @@ body {
 }
 
 .correct {
+  text-decoration: underline;
+}
+
+.exits {
   color: #00ffff;
   text-decoration: underline;
 }

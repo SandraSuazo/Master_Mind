@@ -20,13 +20,17 @@
     <title>Master Mind</title>
   </head>
   <body>
-    <div
-      class="container container-fluid d-flex justify-content-center align-items-center"
-    >
+    <div class="d-flex justify-content-center">
       <div class="black-box">
-        <!-- WINNER / LOSER -->
-        <div></div>
-        <!-- PLAY AGAIN -->
+        <!-- GANADOR -->
+        <div class="d-flex justify-content-center">
+          <img
+            class="col-12 mt-5 mb-5"
+            src="../assets/loser.png"
+            alt="¡Has ganado!"
+          />
+        </div>
+        <!-- JUGAR DE NUEVO -->
         <div class="d-flex justify-content-center">
           <img
             class="col-8 mt-4 mb-4"
@@ -34,16 +38,16 @@
             alt="¿Jugar de nuevo?"
           />
         </div>
-        <!-- BUTTONS -->
-        <div class="row-8 d-flex justify-content-around mt-4">
+        <!-- BOTONES -->
+        <div class="d-flex justify-content-around">
           <a
-            class="btn mt-4 d-flex justify-content-center align-items-center"
+            class="btn"
             id="btn-data"
             onclick="navigator('btn-data', 'data.html')"
             >SI</a
           >
           <a
-            class="btn mt-4 d-flex justify-content-center align-items-center"
+            class="btn"
             id="btn-init"
             onclick="navigator('btn-init', '../index.html')"
             >NO</a
@@ -51,6 +55,6 @@
         </div>
       </div>
     </div>
-    <script src=""></script>
+    <script src="../js/helpers.js"></script>
   </body>
 </html>
