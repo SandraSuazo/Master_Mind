@@ -1,4 +1,4 @@
-![Logo ](assets/master-mind-logo.png)
+#![Logo ](assets/master-mind-logo.png)
 El jugador debe elegir 5 colores. El objetivo del juego es adivinar
 el orden correcto de estos colores, teniendo en cuenta que la
 solución esta compuesta de 4 colores; para ello dispondrá de 10
