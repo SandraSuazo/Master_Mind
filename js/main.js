@@ -30,7 +30,7 @@ const savePlayerColors = () => {
 const getPlayerName = () => {
   const playerName = sessionStorage.getItem("playerName");
   const playerText = document.getElementById("text-game");
-  const textGame = `Busca la combinación de colores correcta. ¡Mucha suerte ${playerName}!`;
+  const textGame = `Jugador: ${playerName}`;
   playerText.textContent = textGame;
 };
 getPlayerName();

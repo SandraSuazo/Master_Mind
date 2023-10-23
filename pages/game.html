@@ -16,16 +16,20 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/media.css" />
     <link rel="icon" type="image/x-icon" href="../assets/logo.png" />
     <title>Master Mind</title>
   </head>
   <body>
     <div class="row d-flex align-items-center">
       <!-- COLUMNA IZQUIERDA -->
-      <div class="col-5">
+      <div class="col-6">
         <!-- SALUDO JUGADOR -->
         <div>
-          <p class="text-game text-center" id="text-game"></p>
+          <p
+            class="text-game text-center d-flex justify-content-start"
+            id="text-game"
+          ></p>
         </div>
         <!-- COLORES -->
         <div class="d-flex justify-content-around">
@@ -38,14 +42,14 @@
         <!-- BOTONES -->
         <div class="flex-column d-flex align-items-center">
           <a
-            class="btn btn-game"
+            class="btn btn-game d-flex align-items-center justify-content-center"
             id="btn-help"
             onclick="navigator('btn-help', '../pages/about.html')"
           >
             AYUDA
           </a>
           <a
-            class="btn btn-game"
+            class="btn btn-game d-flex align-items-center justify-content-center"
             id="btn-exit"
             onclick="navigator('btn-exit', '../pages/data.html')"
           >
@@ -54,7 +58,7 @@
         </div>
       </div>
       <!--  TABLA -->
-      <div class="col-7">
+      <div class="col-6">
         <div id="game-board"></div>
       </div>
     </div>

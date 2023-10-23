@@ -1,0 +1,101 @@
+.logo-index {
+  @media (max-width: 485px) {
+    width: 20em;
+    height: 20em;
+  }
+}
+
+.black-box {
+  @media (max-width: 485px) {
+    margin-top: 3em;
+  }
+}
+
+.text-about {
+  @media (max-width: 655px) {
+    font-size: medium;
+  }
+  @media (max-width: 485px) {
+    font-size: small;
+  }
+  @media (max-width: 365px) {
+    font-size: x-small;
+  }
+}
+
+.text-game {
+  @media (max-width: 975px) {
+    font-size: x-large;
+    margin-left: 1em;
+  }
+  @media (max-width: 495px) {
+    font-size: large;
+  }
+  @media (max-width: 365px) {
+    font-size: medium;
+  }
+}
+
+.btn-game {
+  @media (max-width: 975px) {
+    font-size: large;
+    width: 20em;
+    height: 3em;
+  }
+  @media (max-width: 740px) {
+    font-size: medium;
+    width: 15em;
+    height: 2em;
+  }
+  @media (max-width: 495px) {
+    width: 10em;
+    height: 2em;
+  }
+  @media (max-width: 365px) {
+    font-size: small;
+    width: 8em;
+    height: 2em;
+  }
+}
+.check-color,
+.color {
+  @media (max-width: 975px) {
+    width: 6vw;
+    height: 6vh;
+  }
+  @media (max-width: 605px) {
+    width: 4vw;
+    height: 4vh;
+  }
+  @media (max-width: 495px) {
+    width: 3vw;
+    height: 3vh;
+  }
+  @media (max-width: 365px) {
+    width: 3vw;
+    height: 3vh;
+    margin: 5px;
+    margin-right: 1em;
+  }
+}
+
+.check-circle {
+  @media (max-width: 975px) {
+    width: 3vw;
+    height: 4vh;
+  }
+  @media (max-width: 605px) {
+    width: 1vw;
+    height: 3vh;
+  }
+  @media (max-width: 495px) {
+    width: 1vw;
+    height: 2vh;
+  }
+  @media (max-width: 365px) {
+    width: 1em;
+    height: 1em;
+    margin: 5px;
+    margin-right: 1em;
+  }
+}
