@@ -16,9 +16,10 @@ const savePlayerColors = () => {
     document.getElementById("player-color2").value,
     document.getElementById("player-color3").value,
     document.getElementById("player-color4").value,
+    document.getElementById("player-color5").value,
   ];
   if (playerColors.includes("#000000")) {
-    alert("Por favor, selecciona 4 colores.");
+    alert("Por favor, selecciona 5 colores.");
     return false;
   }
   saveToSessionStorage("playerColors", playerColors);
@@ -29,24 +30,25 @@ const savePlayerColors = () => {
 const getPlayerName = () => {
   const playerName = sessionStorage.getItem("playerName");
   const playerText = document.getElementById("text-game");
-  const textGame = `Busca la combinación de colores correcta. ¡Muchas suerte ${playerName}!`;
+  const textGame = `Busca la combinación de colores correcta. ¡Mucha suerte ${playerName}!`;
   playerText.textContent = textGame;
 };
 getPlayerName();
 
-// IMPRESIÓN DE LOS 4 COLORES ELEGIDOS
+// IMPRESIÓN DE LOS 5 COLORES ELEGIDOS
 const getPlayerColors = () => {
   const selectedColors = sessionStorage.getItem("playerColors").split(",");
-  for (let i = 1; i <= 4; i++) {
+  for (let i = 0; i < selectedColors.length; i++) {
     const gameColor = document.getElementById(`color${i}`);
-    gameColor.style.backgroundColor = selectedColors[i - 1];
+    gameColor.style.backgroundColor = selectedColors[i];
     gameColor.addEventListener("click", () => {
-      addColor(selectedColors[i - 1]);
+      addColor(selectedColors[i]);
     });
   }
 };
 getPlayerColors();
 
 // BARAJEADO DE LOS COLORES
-const selectedColors2 = sessionStorage.getItem("playerColors").split(",");
-const shuffledColors = selectedColors2.sort((a, b) => 0.5 - Math.random());
+const selectedColors = sessionStorage.getItem("playerColors").split(",");
+let shuffledColors = selectedColors.sort((a, b) => 0.5 - Math.random());
+shuffledColors = shuffledColors.splice(0, 4);

@@ -1,3 +1,4 @@
+let rowColors = [];
 let selectedRow = 0;
 let selectedSquare = 0;
 let selectedCircle = 0;
@@ -26,25 +27,32 @@ const createBoard = () => {
 };
 createBoard();
 
-// RELLENAR TABLA Y CORRECCIÓN
+// RELLENADO DE CADA FILA
 const addColor = (color) => {
+  rowColors.push(color);
   const square = document.getElementById(
     `squareColor-${selectedRow}-${selectedSquare}`
   );
   square.style.backgroundColor = color;
-  const circle = document.getElementById(
-    `circleColor-${selectedRow}-${selectedCircle}`
-  );
-  if (color === shuffledColors[selectedSquare]) {
-    circle.style.backgroundColor = "#00FFFF";
-  } else {
-    circle.style.backgroundColor = "#FB44FF";
-  }
   selectedSquare += 1;
-  selectedCircle += 1;
+  checkColors();
+};
+
+// CORRECCIÓN DE COLORES
+const checkColors = () => {
   if (selectedSquare === 4) {
-    selectedRow += 1;
+    for (let i = 0; i < 4; i++) {
+      const circle = document.getElementById(`circleColor-${selectedRow}-${i}`);
+      if (shuffledColors[i] === rowColors[i]) {
+        circle.style.backgroundColor = "#FFFFFF";
+      } else if (shuffledColors.includes(rowColors[i])) {
+        circle.style.backgroundColor = "#00ffff";
+      } else {
+        circle.style.backgroundColor = "#fb44ff";
+      }
+    }
     selectedSquare = 0;
-    selectedCircle = 0;
+    selectedRow += 1;
+    rowColors = [];
   }
 };
