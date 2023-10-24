@@ -35,30 +35,30 @@ const addColor = (color) => {
   );
   square.style.backgroundColor = color;
   selectedSquare += 1;
-  checkColors();
+  if (selectedSquare === 4) {
+    checkColors();
+  }
 };
 
 // CORRECCIÓN DE COLORES Y PANTALLA GANADOR / PERDEDOR
 const checkColors = () => {
-  if (selectedSquare === 4) {
-    for (let i = 0; i < 4; i++) {
-      const circle = document.getElementById(`circleColor-${selectedRow}-${i}`);
-      if (shuffledColors[i] === rowColors[i]) {
-        circle.style.backgroundColor = "#FFFFFF";
-      } else if (shuffledColors.includes(rowColors[i])) {
-        circle.style.backgroundColor = "#00ffff";
-      } else {
-        circle.style.backgroundColor = "#fb44ff";
-      }
+  for (let i = 0; i < 4; i++) {
+    const circle = document.getElementById(`circleColor-${selectedRow}-${i}`);
+    if (shuffledColors[i] === rowColors[i]) {
+      circle.style.backgroundColor = "#FFFFFF";
+    } else if (shuffledColors.includes(rowColors[i])) {
+      circle.style.backgroundColor = "#00ffff";
+    } else {
+      circle.style.backgroundColor = "#fb44ff";
     }
-    if (shuffledColors.toString() === rowColors.toString()) {
-      window.location.href = "./winner.html";
-    }
-    selectedSquare = 0;
-    selectedRow += 1;
-    if (selectedRow === 10) {
-      window.location.href = "./loser.html";
-    }
-    rowColors = [];
   }
+  if (shuffledColors.toString() === rowColors.toString()) {
+    window.location.href = "./winner.html";
+  }
+  selectedSquare = 0;
+  selectedRow += 1;
+  if (selectedRow === 10) {
+    window.location.href = "./loser.html";
+  }
+  rowColors = [];
 };
