@@ -50,5 +50,7 @@ getPlayerColors();
 
 // BARAJEADO DE LOS COLORES
 const selectedColors = sessionStorage.getItem("playerColors").split(",");
-let shuffledColors = selectedColors.sort((a, b) => 0.5 - Math.random());
-shuffledColors = shuffledColors.splice(0, 4);
+const shuffledColors = [];
+for (let i = 0; i <= 3; i++) {
+  shuffledColors.push(selectedColors[Math.floor(Math.random() * 4)]);
+}
